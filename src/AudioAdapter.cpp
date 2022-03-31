@@ -5,15 +5,13 @@
  *    @param  i2cdevice 用于底层 I2C 通信的 Adafruit_I2CDevice 设备
  */
 AudioAdapter::AudioAdapter(Adafruit_I2CDevice *i2cdevice) {
-  _i2cdevice = i2cdevice;
+  this->i2cdevice = i2cdevice;
 }
 
 /*!
  *    @brief  初始化音频设备
- *    @param  i2cdevice 用于底层 I2C 通信的 Adafruit_I2CDevice 设备
  */
 bool AudioAdapter::init() {
-  // _i2cdevice->begin();
   return initDev();
 }
 
@@ -23,13 +21,7 @@ bool AudioAdapter::init() {
  *    @return 成功设置音量则返回 true
  */
 bool AudioAdapter::setVolume(int8_t volume) {
-  if(volume > 100){
-    volume = 100;
-  } else if(volume < 0) {
-    volume = 0;
-  }
-  _volume = volume;
-  return writeVolume2Dev(_volume);
+  return writeVolume2Dev(volume);
 }
 
 /*!
@@ -37,5 +29,6 @@ bool AudioAdapter::setVolume(int8_t volume) {
  *    @return 当前音量
  */
 int8_t AudioAdapter::getVolume() {
-  return _volume;
+  //TODO: Read volume from device
+  return 0;
 }

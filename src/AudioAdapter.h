@@ -6,8 +6,7 @@
 #include <Adafruit_I2CDevice.h>
 
 /*!
- * @brief The class which defines a device register (a location to read/write
- * data from)
+ * @brief The class which defines a device supports audio playing/recording
  */
 class AudioAdapter {
 public:
@@ -24,15 +23,8 @@ protected:
  *    @return 初始化成功则返回 true
  */
   virtual bool initDev() = 0;
-  
-/*!
- *    @brief  将音量设置写入设备
- *    @param  volume 要设置的音量。音量最大为 100， 最小为 0 （静音）
- *    @return 成功设置音量则返回 true
- */
   virtual bool writeVolume2Dev(int8_t volume) = 0;
 
-  Adafruit_I2CDevice *_i2cdevice;
-  int8_t _volume;
+  Adafruit_I2CDevice *i2cdevice;
 };
 #endif // Audio_Adapter_h
