@@ -6,12 +6,14 @@
 #include <Adafruit_I2CDevice.h>
 
 #include "AudioHal.h"
+#include "HardwareAdapter.h"
 /*!
- * @brief The class which defines a device supports audio playing/recording
+ * @brief 支持录放音的设备，通常为通过 I2C 进行配置
  */
-class AudioAdapter {
+class AudioAdapter : public HardwareAdapter {
 public:
   AudioAdapter(Adafruit_I2CDevice *i2cdevice);
+  virtual ~AudioAdapter(){};
 
 /*!
  *    @brief  设置音量
