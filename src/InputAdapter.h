@@ -4,7 +4,7 @@
 #include <Arduino.h>
 #include "HardwareAdapter.h"
 #include "InputData.h"
-
+#include <Wire.h>
 #include <Adafruit_I2CDevice.h>
 /*!
  * @brief The class which defines an input device
@@ -12,7 +12,8 @@
 class InputAdapter : public HardwareAdapter {
   public:
     InputAdapter();
-    InputAdapter(Adafruit_I2CDevice *);
+    InputAdapter(TwoWire*, uint8_t);
+    InputAdapter(Adafruit_I2CDevice*);
     virtual ~InputAdapter(){};
     virtual void readInputData(input_data* input){};
 

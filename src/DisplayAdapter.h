@@ -13,6 +13,9 @@ class DisplayAdapter : public HardwareAdapter {
     virtual int16_t getScreenWidth() {return screenWidth;};
     virtual int16_t getScreenHeight() {return screenHeight;};
     virtual int16_t getColorBit() {return bpp;};
+    virtual bool setLight(int8_t) {return true;};
+    virtual bool trunOn() {return true;};
+    virtual bool trunOff() {return true;};
   protected:
     int16_t screenWidth;
     int16_t screenHeight;
