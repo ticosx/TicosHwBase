@@ -7,7 +7,7 @@
 
 #include "HardwareAdapter.h"
 /*!
- * @brief 支持录放音的设备，通常为通过 I2C 进行配置
+ * @brief 支持gsensor的设备，通常为通过 I2C 进行配置
  */
 class GsensorAdapter : public HardwareAdapter {
 public:
