@@ -1,5 +1,5 @@
-#ifndef Weigh_Adapter_h
-#define Weigh_Adapter_h
+#ifndef Temp_Adapter_h
+#define Temp_Adapter_h
 
 #include <Arduino.h>
 #include "SensorHal.h"
