@@ -5,7 +5,7 @@
 #include "SensorHal.h"
 #include "HardwareAdapter.h"
 /*!
- * @brief 支持
+ * @brief 支持charger设备
  */
 class ChargerAdapter : public HardwareAdapter {
 
