@@ -5,7 +5,7 @@
 #include "WeightHal.h"
 #include "HardwareAdapter.h"
 /*!
- * @brief 支持
+ * @brief 支持weight 设备
  */
 class WeightAdapter : public HardwareAdapter {
 
