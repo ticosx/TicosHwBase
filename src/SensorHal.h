@@ -46,6 +46,14 @@ typedef struct
     uint16_t adc_vref;
 }chg_info_t;
 
+//LED接口信息
+typedef struct
+{
+    uint8_t tx_pin;
+    uint8_t tx_chn;
+    uint32_t led_nums;
+}led_info_t;
+
 #ifdef __cplusplus
 }
 #endif
