@@ -19,7 +19,7 @@ public:
     virtual void fill(TColor color) = 0;
     virtual void fill(TColor color, uint32_t pixelCount, bool fromTail) =  0;
     virtual void fillPattern(LedPattern* pat, uint32_t shift) = 0;
-    virtual void setLedConfig(uint8_t mode,uint8_t bright,TColor color) = 0;
+    virtual void setLedConfig(uint8_t mode,uint8_t bright,uint32_t delaytime,TColor color) = 0;
     virtual void show()= 0;
     virtual uint32_t getLength() = 0;
     virtual bool init() = 0; 
